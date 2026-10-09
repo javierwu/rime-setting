@@ -15,22 +15,21 @@ macOS 鼠须管（Squirrel）的个人配置，基于 [雾凇拼音 rime-ice](ht
 
 ## 快速开始
 
-1. **装雾凇拼音**（本仓库不含词库，只含自定义配置）：
+1. **装鼠须管 Squirrel** —— 到 GitHub 项目下载安装：[rime/squirrel](https://github.com/rime/squirrel)
 
-   ```bash
-   cd ~/Library/Rime
-   curl -LO https://mirror.nju.edu.cn/github-release/iDvel/rime-ice/LatestRelease/full.zip
-   unzip -o full.zip -x weasel.yaml        # weasel.yaml 是 Windows 专用，跳过
-   ```
+2. **装雾凇拼音** —— 到 GitHub 项目下载 `full.zip`，解压到 `~/Library/Rime`
+   （本仓库不含词库，只含自定义配置）：[iDvel/rime-ice](https://github.com/iDvel/rime-ice)
 
-2. **放本仓库的配置**：
+   > 解压时 `weasel.yaml` 是 Windows 专用文件，可以跳过；覆盖已有文件是安全的。
+
+3. **放本仓库的配置**：
 
    ```bash
    git clone https://github.com/javierwu/rime-setting.git /tmp/rime-setting
    /tmp/rime-setting/install.sh            # 复制 3 个 custom 文件 + lua/ 释义文件，旧的会备份
    ```
 
-3. **重新部署**：点菜单栏 🐿️ →「重新部署」。
+4. **重新部署**：点菜单栏 🐿️ →「重新部署」。
 
 ## 功能对照
 

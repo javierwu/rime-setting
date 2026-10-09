@@ -15,8 +15,8 @@ fi
 if [ ! -f "$RIME_DIR/rime_ice.schema.yaml" ]; then
   echo "警告：$RIME_DIR/rime_ice.schema.yaml 不存在。"
   echo "这些配置依赖雾凇拼音（rime-ice），请先装它，否则部署会失败。"
-  echo "  curl -LO https://mirror.nju.edu.cn/github-release/iDvel/rime-ice/LatestRelease/full.zip"
-  echo "  unzip -o full.zip -x weasel.yaml -d \"$RIME_DIR\""
+  echo "  下载 full.zip 解压到 $RIME_DIR（weasel.yaml 可跳过）"
+  echo "  https://github.com/iDvel/rime-ice"
   echo
   read -r -p "仍然继续？[y/N] " ans
   case "$ans" in [yY]*) ;; *) exit 1 ;; esac

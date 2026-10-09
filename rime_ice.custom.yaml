@@ -1,0 +1,29 @@
+# 雾凇拼音自定义配置（由 Codex 生成）
+# 生效方式：鼠须管菜单 →「重新部署」
+patch:
+  # 默认输出半角标点（, . ? ! ; : ' " ( ) 等），需要时按 ⌃. 或 ⌃⇧3 切到全角中文标点（，。？！）
+  # reset: 1 表示每次加载都回到半角；想让它记住「切成全角后一直保持」，删掉 reset 那行即可。
+  # 注意：此列表需与 rime_ice.schema.yaml 的 switches 保持一致，升级雾凇拼音后请同步。
+  switches:
+    - name: ascii_mode
+      states: [ 中, Ａ ]
+    - name: ascii_punct
+      states: [ ¥, $ ]
+      reset: 1
+    - name: traditionalization
+      states: [ 简, 繁 ]
+    - name: emoji
+      states: [ 💀, 😄 ]
+      reset: 1
+    - name: full_shape
+      states: [ 半角, 全角 ]
+    - name: search_single_char
+      states: [正常, 单字]
+      abbrev: [词, 单]
+
+  # ---- 中文候选 → 英文释义（离线，见 lua/zh_en_gloss.lua）----
+  # 关掉拼音提示码，把候选的注释槽让给英文释义；corrector.lua 失去拼音输入后不再触发。
+  "translator/spelling_hints": 0
+  # 把释义过滤器追加到过滤器链末尾（不覆盖其它 filter 的行为）
+  "engine/filters/+":
+    - lua_filter@*zh_en_gloss

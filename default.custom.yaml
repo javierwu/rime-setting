@@ -1,0 +1,11 @@
+# Rime 全局自定义配置（由 Codex 生成）
+# 生效方式：鼠须管菜单 →「重新部署」
+patch:
+  # 输入方案列表：只保留需要的两个
+  schema_list:
+    - schema: rime_ice     # 雾凇拼音（全拼）：中英混合输入 + 英文联想
+    - schema: melt_eng     # 纯英文方案：输入前缀即联想补全完整单词
+
+  # 追加「中英标点」切换快捷键 ⌃ .（默认已内置 ⌃⇧3）
+  key_binder/bindings/+:
+    - { when: always, accept: Control+period, toggle: ascii_punct }

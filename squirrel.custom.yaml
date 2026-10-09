@@ -1,0 +1,6 @@
+# 鼠须管外观自定义（由 Codex 生成）
+# 雾凇拼音自带的皮肤是 purity_of_form_custom，这里保留你原来的 native（跟随系统深浅色）。
+# 想换成雾凇拼音的皮肤：把下面两行改成 purity_of_form_custom 后重新部署。
+patch:
+  "style/color_scheme": native
+  "style/color_scheme_dark": native
